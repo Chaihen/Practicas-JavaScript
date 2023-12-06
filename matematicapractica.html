@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica Matemáticas</title>
+  </head>
+
+  <body>
+    <h1>Lotería Kino Táchira</h1>
+    <h2 id="numerosSorteados"></h2>
+    <button onclick="generarNumeros()">¡Generar Números!</button>
+
+    <script>
+      function generarNumeros() {
+        var numeros = "";
+
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25) + " ";
+        numeros += Math.ceil(Math.random() * 25);
+
+        document.getElementById("numerosSorteados").innerHTML =
+          "Los números sorteados son:" + "<br>" + numeros;
+      }
+    </script>
+  </body>
+</html>

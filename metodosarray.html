@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Array</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+    <h2 id="ejemplo3"></h2>
+    <h2 id="ejemplo4"></h2>
+    <h2 id="ejemplo5"></h2>
+    <h2 id="ejemplo6"></h2>
+    <h2 id="ejemplo7"></h2>
+    <h2 id="ejemplo8"></h2>
+    <h2 id="ejemplo9"></h2>
+
+    <script>
+        const frutas = ["Banana", "Naranja", "Manzana", "Mango"];
+
+        document.getElementById('ejemplo').innerHTML = 
+        frutas + "<br>" +
+        frutas.toString() + "<br>" +
+        frutas.join(' / ') + "<br>"; //El método join() también une todos los elementos de la matriz en una cadena. Se comporta como toString(), pero además puedes especificar el separador//
+
+        frutas.pop()//El método pop()elimina el último elemento de una matriz://
+
+      document.getElementById('ejemplo2').innerHTML = 
+      frutas + "<br>" +
+      frutas.pop();//aqui despues del document te dice cual elemnto fue eliminado//
+
+      frutas.push('Papaya');//El método push()agrega un nuevo elemento a una matriz (al final)El método push()devuelve la nueva longitud de la matriz te dice cual elemento fue agregado//
+      document.getElementById('ejemplo3').innerHTML =
+      frutas + "<br>" +
+      frutas.push('Fresa') + "<br>" +
+      frutas;
+
+    frutas.shift();
+    document.getElementById('ejemplo4').innerHTML = 
+        frutas + "<br>" +
+        frutas.length + "<br>" +
+        frutas.shift() + "<br>" +
+        frutas.length;
+
+    frutas.unshift('Maracuya');
+    document.getElementById('ejemplo5').innerHTML = 
+        frutas + "<br>" +
+        frutas.unshift('Melon');
+
+    const verduras = ["Brocoli", "Espinacas"];
+    const carnes = ["Res", "Cordero"];
+
+    document.getElementById('ejemplo6').innerHTML =
+        frutas.concat(verduras) + "<br>" +
+        frutas.concat(verduras, carnes, "Huevo");
+
+    const matriz1 = [[1,2],[3,4],[5,6]];
+        const matrizFlat = matriz1.flat();
+    document.getElementById('ejemplo7').innerHTML = 
+        matriz1.length + "<br>" +
+        matriz1 + "<br>" +
+        matrizFlat.length;
+
+    const frutasSplice = frutas.splice(2, 0, "Piña", "Coco")
+    document.getElementById('ejemplo8').innerHTML =
+        frutas + "<br>" +
+        frutasSplice;
+
+    document.getElementById('ejemplo9').innerHTML =
+        frutas.slice(2, 4);
+    </script>
+</body>
+</html>

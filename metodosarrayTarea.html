@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métodos Array (Ejercicio de Práctica)</title>
+  </head>
+  <body>
+    <h2 id="frutas"></h2>
+    <h2 id="vegetales"></h2>
+    <h2 id="resultado"></h2>
+
+    <script>
+      const frutas = ["Banana", "Naranja", "Manzana", "Mango"];
+      frutas.push("Parchita");
+
+      document.getElementById("frutas").innerHTML =
+        frutas + "<br>" + 
+        frutas.length + "<br>"
+        frutas.push();
+
+      const vegetales = ["Brocolis", "Coliflor", "Berengena", "Calabacin"];
+      vegetales.pop();
+
+      document.getElementById("vegetales").innerHTML =
+        vegetales + "<br>" +
+        vegetales.length + "<br><br>" +
+        frutas.concat(vegetales);
+
+      const listaUnificada = frutas.concat(vegetales);
+
+      let listaFinal = "<ul>";
+      listaUnificada.forEach(agregarElemento);
+      listaFinal += "</ul>";
+
+      function agregarElemento(valor) {
+        listaFinal += "<li>" + valor + "</li>";
+      }
+
+      document.getElementById("resultado").innerHTML = listaFinal;
+    </script>
+  </body>
+</html>

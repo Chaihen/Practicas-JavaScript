@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Formulário</title>
+</head>
+<body>
+    <form action="" id="formulario1">
+        Nombre: <input type="text" name="formulario1" value="Chai"><br>
+        Apellidos: <input type="text" name="formulario1" value="Gonzalez"><br>
+        Edad: ,<input type="number" name="formulario1" value="41"><br>
+    </form>
+    <input type="button" value="Enviar">
+    <br>
+    Lista de los datos del cliente: <br>
+    <p id="ejemplo"></p>
+    <script>
+        const x = document.forms['formulario1'];
+        let texto = "";
+        for (let i = 0; i < x.length; i++){
+            texto += x.elements[i].value + "<br>";
+        }
+        document.getElementById('ejemplo').innerHTML = texto;
+
+    </script>
+</body>
+</html>

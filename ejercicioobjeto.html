@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Ejercicio Objetos</title>
+  </head>
+  <body>
+    <h1 id="ejemplo"></h1>
+    
+    <script>
+      const auto1 = {
+        tipo: "Fiat",
+        modelo: "500",
+        color: "blanco",
+      };
+
+      const auto2 = {
+        tipo: "Toyota",
+        modelo: "Corrolla",
+        color: "negro",
+      };
+
+      const auto3 = {
+        tipo: "Chevrolet",
+        modelo: "TrailBlazer",
+        color: "verde",
+      };
+
+     const tiposAutos = {
+        todoslostipos: function() {return auto1.tipo + " " + auto2.tipo + " " + auto3.tipo},
+     };
+
+     const modelosAutos = {
+        todoslosmodelos: function() {return auto1.modelo + " " + auto2.modelo + " " + auto3.modelo},
+     };
+
+     const coloresAutos = {
+        todosloscolores: function() {return auto1.color + " " + auto2.color + " " + auto3.color},
+     };
+
+        document.getElementById("ejemplo").innerHTML = tiposAutos.todoslostipos() + "<br>" + modelosAutos.todoslosmodelos() + " " + coloresAutos.todosloscolores();    
+        </script>
+  </body>
+</html>

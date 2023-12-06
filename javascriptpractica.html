@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de JavaScript</title>
+</head>
+<body>
+    <h2 id="nombre">Descubre el nombre del pez.</h2>
+    <button type="button" onclick="document.getElementById('nombre').innerHTML= 'Pez Payaso'">Clic para conocer el nombre</button><br><br>
+
+    <img src="imagenes js/nemo2.jpg" width="100%" alt="pez Payaso en un coral" id="nemo"><br><br>
+    <button type="button" onclick="document.getElementById('nemo').src= 'imagenes js/deserto.jpg'">Clic para cambiar la imagen</button>
+    <button onclick="document.getElementById('nemo').src= 'imagenes js/nemo2.jpg'">Clic para volver a nemo</button><br><br>
+    <button type="button" onclick="document.getElementById('nemo').style.width = '200%'">Cambia el tamaño de la imagen</button>
+    <button type="button" onclick="document.getElementById('nemo').style.width ='100%'">Volver al tamaño original</button><br><br>
+    <button type="button" onclick="document.getElementById('nemo').style.display='none'">Ocultar imagen</button>
+    <button type="button" onclick="document.getElementById('nemo').style.display = 'block'">Mostrar imagen</button>
+</body>
+</html>

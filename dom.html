@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Document Object Model)</title>
+</head>
+<body>
+    <p class="primarParrafoDeGrupo">Elementos por párrafos.</p>
+    <p>Demostración del método getElementsByTagName.</p>
+    <h3 id="ejemplo"></h3>
+
+    <script>
+        const elemento = document.getElementsByTagName("p");
+
+        document.getElementById('ejemplo').innerHTML = elemento[0].
+        innerHTML;
+    </script>
+
+    <div id="principal">
+        <p class="primarParrafoDeGrup">Primer párrafo del div</p>
+        <p>Segundo párrafo del div</p>
+    </div>
+    <h3 id="ejemplo2"></h3>
+
+    <script>
+        const x = document.getElementById("principal");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("ejemplo2").innerHTML = y[0].innerHTML;
+    </script>
+
+    <p class="tercerosParrafos">Tercer párrafo A</p>
+    <p class="tercerosParrafos">Tercer párrafo B</p>
+    <h3 id="ejemplo3">Tercer resultado</h3>
+
+    <script>
+        const z = document.getElementsByClassName('tercerosParrafos');
+        document.getElementById('ejemplo3').innerHTML = z[0].innerHTML;
+    </script>
+
+    <h4 id="ejemplo4"></h4>
+
+    <script>
+        x2 = document.querySelectorAll('p.tercerosParrafos');
+        document.getElementById('ejemplo4').innerHTML = x2[0].innerHTML;
+    </script>
+</body>
+</html>

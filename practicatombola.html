@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Tombola</title>
+</head>
+<body>
+    <h1>Lotería Kino Táchira</h1>
+    <div id="numerosSorteados"></div>
+    <button onclick="generarNumeros()">¡Generar Números!</button>
+    
+    <script>
+    
+    function generarNumeros() {
+      var numerosLoteria = [];
+
+      for (var i = 0; i < 15; i++) {
+        var numeroAleatorio = "";
+
+        do {
+          numeroAleatorio = Math.ceil(Math.random() * 25);
+        } while (numerosLoteria.includes(numeroAleatorio));
+        
+        numerosLoteria.push(numeroAleatorio);
+      }
+
+      var numeros = numerosLoteria.join(' - ');
+
+      document.getElementById('numerosSorteados').innerHTML = "Los números sorteados son: " + numeros;
+    }
+    
+  </script>
+  </body>
+</html>

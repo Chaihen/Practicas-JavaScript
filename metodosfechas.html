@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos en Fechas</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+
+    <script>
+        const fecha = new Date();
+
+        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+        const diaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"];
+
+        document.getElementById('ejemplo').innerHTML = 
+        fecha.getFullYear() + "<br>" +
+        meses[fecha.getMonth()] + "<br>" +
+        fecha.getDate() + "<br>" +
+        fecha.getHours() + "<br>" +
+        fecha.getTime() + "<br>" +
+        diaSemana[fecha.getDay()];
+
+        fecha.setFullYear(2000, 0, 21);
+
+        document.getElementById('ejemplo2').innerHTML =
+        fecha.toDateString();
+        
+    </script>
+</body>
+</html>

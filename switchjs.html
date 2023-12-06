@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+
+    <script>
+      let dia;
+
+      switch (0) {
+        case 1:
+          dia = "Lunes";
+          break;
+        case 2:
+          dia = "Martes";
+          break;
+        case 3:
+          dia = "Miércoles";
+          break;
+        case 4:
+          dia = "Jueves";
+          break;
+        case 5:
+          dia = "Viernes";
+          break;
+        default:
+          dia = "fin de semana y el cuerpo lo sabe!";
+      }
+      document.getElementById("ejemplo").innerHTML = "Hoy es " + dia;
+
+      let x = "0";
+      switch (x) {
+        case 0:
+          texto = "Apagado";
+          break;
+        case 1:
+          texto = "Encendido";
+          break;
+        default:
+          texto = "Sin valor";
+      }
+      document.getElementById('ejemplo2').innerHTML = texto;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de Datos</title>
+  </head>
+  <body>
+    <h2 id="ejemplo"></h2>
+    <script>
+      // Numeros:
+      let longitud = 16;
+      let peso = 7.5;
+
+      // Cadenas:
+      let color = "Amarillo";
+      let apellido = "Perez";
+
+      // Buleanos
+      let z = true;
+      let y = false;
+
+      // Objeto:
+      const persona = { nombre: "Juan", apellido: "Perez" , edad: 50, colorOjos: "cafe"};
+
+      // Objeto de matriz:
+      const automoviles = ["Toyota", "Volvo", "BMW"];
+
+      // Objeto de fecha:
+      const fecha = new Date("2023-07-09");
+
+      let x = 16 + "Volvo";
+      let x1 = "16" + "Volvo";
+      let x2 = 16 + 4 + "Volvo";
+      let x3 = "Volvo" + 16 + 4;
+
+      // Usando comillas dobles:
+      let automovil1 = "Volvo XC60";
+
+      // Usando comillas simples:
+      let automovil2 = "Volvo XC60";
+
+      // Con decimales:
+      let x4 = 34.0;
+
+      // Sin decimales:
+      let x4a = 34;
+
+      let y1 = 123e5; // 12300000
+      let z2 = 123e-5; // 0.00123
+
+      let x5 = BigInt("123456789012345678901234567890");
+
+      let x6 = 5;
+      let y2 = 5;
+      let z3 = 6;
+      //(x6 == y2) // Devuelve true
+      (x6 == z3); // Devuelve false
+
+      document.getElementById("ejemplo").innerHTML = typeof persona.nombre;
+    </script>
+  </body>
+</html>

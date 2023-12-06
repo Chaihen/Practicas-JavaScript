@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+  </head>
+  <body>
+    <label for="gradosFar">Introduzca sus grados Fahrenheit</label>
+    <input type="number" name="gradosFar" id="gradosFar" />
+    <button type="button" onclick="aCelsius()">Convertir</button>
+    <h2 id="ejemplo"></h2>
+    <h2 is="ejemplo2"></h2>
+
+    <script>
+      function aCelsius() {
+        fahrenheit = document.getElementById("gradosFar").value;
+        resultado = (5 / 9) * (fahrenheit - 32);
+        return (document.getElementById("ejemplo").innerHTML =
+          "Su temperatura es " + resultado + "°C");
+      }
+      let texto = "Afuera es " + typeof marcaCarro;
+      document.getElementById('ejemplo').innerHTML = texto;
+
+      function miFuncion() {
+        let marcaCarro = "Audi";
+        let texto = "Dentro es" + typeof marcaCarro + " " + marcaCarro;
+        document.getElementById('ejemplo2').innerHTML = texto;
+      }
+      miFuncion();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica String</title>
+</head>
+<body>
+    <h1 id="ejemplo"></h1>
+
+    <script>
+        let apodo = "Le dicen 'Juanito'";
+            apodo2 = 'le dicen "Juanito"';
+
+            let x = "Juan";
+                y = new String("Juan");
+
+                frutas = "Manzana, Banana, banana, Limon";
+                parte = frutas.slice(9,15);
+                parte2 = frutas.substr(9,6);
+                reemplaza = frutas.replace(/Banana/gi, "Platano");
+                reemplazatodo = frutas.replaceAll(/banana/gi, "Cambur");
+               // frutas.toUpperCase()
+                //frutas.toLowerCase()
+                //frutas.concat(x,y,"") == x + y + ""
+                //frutas.trim() //para quitar espacios en blancos colocados por el usuario en un campo de entrada
+
+
+            document.getElementById('ejemplo').innerHTML = apodo + "<br>" + apodo2 + "<br>" + apodo.length + "<br>" + typeof x + "<br>" + typeof y + "<br>" + (x == y) + "<br>" + parte + "<br>" + parte2 +  "<br>" + reemplaza + "<br>" + frutas + "<br>" + reemplazatodo
+    </script>
+</body>
+</html>

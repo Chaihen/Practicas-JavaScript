@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucles</title>
+  </head>
+  <body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+    <h2 id="ejemplo3"></h2>
+    <h2 id="ejemplo4"></h2>
+    <h2 id="ejemplo5"></h2>
+
+    <script>
+      const autos = ["Toyota", "Volvo", "BMW", "Audi", "Renault", "Ford"];
+      let texto = "";
+
+      texto += autos[0] + "<br>";
+      texto += autos[1] + "<br>";
+      texto += autos[2] + "<br>";
+      texto += autos[3] + "<br>";
+      texto += autos[4] + "<br>";
+      texto += autos[5] + "<br>";
+
+      document.getElementById("ejemplo").innerHTML = texto;
+
+      //Ejemplo con Bucle
+
+      const autos2 = ["Toyota", "Volvo", "BMW", "Audi", "Renault", "Ford"];
+
+      for (let i = 0, texto2 = ""; i < autos2.length; i++) {
+        //podemos declarar la variable texto2 dentro del bucle como otra expresión pero el document debe estar dentro de los parentesis y recordar que luego no se puede llamar a la variable texto2 en otra parte del codigo
+        texto2 += autos2[i] + "<br>";
+        document.getElementById("ejemplo2").innerHTML = texto2;
+      }
+
+      //Ejemplo 2 con Bucle
+
+      let i = 0,
+        texto3 = ""; //podemos declarar las variables (expresión 2) fuera del bucle
+
+      for (; i < 6; ) {
+        texto3 += "El numero es " + i + "<br>";
+        i++; //podemos sacar la expresión 3 del bucle pero dejarla debajo del comportamiento
+      }
+
+      document.getElementById("ejemplo3").innerHTML = texto3;
+
+      //Ejemplo de For Of
+
+      //const frutas = ["Manzana", "Banana", "Naranja"];
+      //for (const x of frutas) {
+      //console.log(x); para ver resultados desde la consola
+      //}
+
+      const frutas = ["Manzana", "Banana", "Naranja"];
+      let texto4 = "";
+      for ( x of frutas) {
+        texto4 += x + "<br>";
+      }
+      document.getElementById("ejemplo4").innerHTML = texto4;
+
+      //Ejemplo con For In
+
+      const frutas2 = ["Manzana", "Banana", "Naranja"];
+      let texto5 = "";
+      for ( x in frutas2) {
+        texto5 += x + "<br>";
+      }
+      document.getElementById('ejemplo5').innerHTML = texto5
+    </script>
+  </body>
+</html>

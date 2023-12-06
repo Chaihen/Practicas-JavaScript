@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales (sí, de otro modo, de lo contrario si)</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+
+    <script>
+
+        //si la hora actual es menor que las 6pm saludame con un Buenos Dias
+        if (new Date().getHours() < 12) {
+            document.getElementById('ejemplo').innerHTML = 
+            "Buenos días!";
+        } 
+        else if (19 < 18) {
+            document.getElementById('ejemplo').innerHTML = 
+            "Buenas tardes!"
+        }
+        else { /*si la condicion no se cumple se ejecuta el siguiente comportamiento*/
+            document.getElementById('ejemplo').innerHTML = 
+            "Buenas noches!";
+        }
+
+        
+let texto;
+if (Math.random() < 0.5) {
+  texto = "<a href='https://mentorseducation.org/pe/'>Visita Mentors Education</a>";
+} else {
+  texto = "<a href='https://mentorsinternational.org/'>Visita Mentors International</a>";
+}
+document.getElementById("ejemplo2").innerHTML = texto;
+
+
+    </script>
+  </body>
+</html>

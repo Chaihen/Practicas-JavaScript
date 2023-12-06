@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica String</title>
+</head>
+<body>    
+    <label for="RUC">Ingresa tu número RUC</label>
+    <input type="number" name="numero"><br><br>
+
+    <button onclick="MostrarDNI()">Clic para ver DNI</button>
+
+    <h2 id="ejemplo"></h2>
+
+    <script>
+
+        function MostrarDNI() {
+
+        let z = "10604534958";
+        let dni = z.slice(2,10);
+
+        document.getElementById('ejemplo').innerHTML = " El DNI es " + dni;
+    } 
+    </script>
+</body>
+</html>

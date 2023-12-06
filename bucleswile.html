@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucles While, Break y Continue, Funciones Flecha</title>
+  </head>
+  <body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+    <h2 id="ejemplo3"></h2>
+    <h2 id="ejemplo4"></h2>
+    <h2 id="ejemplo5"></h2>
+    <h2 id="ejemplo6"></h2>
+    <h2 id="ejemplo7"></h2>
+    <h2 id="ejemplo8"></h2>
+    <h2 id="ejemplo9"></h2>
+    <h2 id="ejemplo10"></h2>
+
+    <script>
+      let i = 0;
+      texto = "";
+      while (i < 10) {
+        texto += "El numero es " + i + "<br>";
+        i++;
+      }
+      document.getElementById("ejemplo").innerHTML = texto;
+
+      let j = 0,
+        texto2 = "";
+      do {
+        texto2 += "El numero es " + j + "<br>";
+        j++;
+      } while (j < 10);
+      document.getElementById("ejemplo2").innerHTML = texto2;
+
+
+      texto3 ="";
+      for (let k = 0; k < 10; k++) {
+        if (k === 3) {break;}
+        texto3 += "El número es " + k + "<br>";
+      }
+      document.getElementById("ejemplo3").innerHTML = texto3;
+
+
+      texto4 ="";
+      for (let x = 0; x < 10; x++) {
+        if (x === 3) {continue;}
+        texto4 += "El número es " + x + "<br>";
+      }
+      document.getElementById("ejemplo4").innerHTML = texto4;
+
+
+      let nombre = "Chaihen", 
+        texto5 = "";
+
+        for (y of nombre) {
+            texto5 += y + "<br>";
+        }
+        document.getElementById("ejemplo5").innerHTML = texto5;
+
+        //Funcion flecha
+        let flecha = (a, b) => a * b;
+        document.getElementById("ejemplo6").innerHTML = flecha(2, 3);
+
+        let saludo = "";
+        saludo = function() { //colocando la palabra fumcion el codigo se hace menos legible, colocando => es mas simple
+            return "Buenas Noches";
+        }
+        document.getElementById('ejemplo7').innerHTML = saludo();
+
+        let saludo2 = "";
+        saludo2 = () => {
+            return "Buenas Noches"
+        }
+        document.getElementById('ejemplo8').innerHTML = saludo2();
+
+        let saludo3 = "";
+        saludo3 = () => //Otra forma de hacer el codigo mas corto es quitando los corchetes y la palabra return
+             "Buenas Noches"; 
+        document.getElementById('ejemplo9').innerHTML = saludo3();
+
+        let saludo4 = "";
+        saludo4 = (val) => 
+             "Buenas Noches" + val; //agregando un valor al retorno de la funcion
+        
+        document.getElementById('ejemplo10').innerHTML = saludo4(" Clase");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <!--<label for="">Haz click en el boton</label>
+
+    <button onclick="this.innerHTML = Date()">
+        ¿Qué hora es?
+    </button>
+
+    <h2 id="ejemplo"></h2>
+        <script></script>
+
+        <h2>Onchange</h2>
+        <input type="text" value="No escribas aqui" onchange="unaFuncion()">
+        <script>
+            function unaFuncion() {
+                alert("la entrada ha sido cambiada")
+            }
+        </script>
+        <h2>Eventos</h2>
+        <input type="text" value="No escribas aqui" onchange="alert('Cambiaste el texto!')"><br><br>
+
+        <input type="text" value="No hagas clic aqui" onclick="alert('Hiciste clic aqui!')"><br><br>
+
+        <input type="text" value="No pongas el cursor aqui" onmouseover="alert('Pusiste el cursor encima!')"><br><br>
+
+        <input type="text" value="No saque elcursor de aqui" onmouseout="alert('Sacaste el cursor!')"><br><br>
+
+        <input type="text" value="No presiones el teclado" onkeydown="alert('Presionaste el teclado!')"><br><br>-->
+
+        <img id="imagen" src="imagenes js/nemo2.jpg" width="50p%" onmouseover="ampliarImagen(this)"
+        onmouseout="reducirImagen(this)">
+        <script>
+            function ampliarImagen(x) {
+                x.style.width = "50%";
+            }
+            function reducirImagen(x) {
+                x.style.width = "25%";
+            }
+        </script>
+
+        <!--<script>
+            function ampliarImagen() {
+                document.getElementById('imagen').style.width = "300px";
+            }
+
+            function reducirImagen() {
+                document.getElementById('imagen').style.width = "100px";            
+            }
+
+        </script>-->
+    </body>
+</html>

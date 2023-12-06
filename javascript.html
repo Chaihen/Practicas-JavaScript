@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de JavaScript</title>
+</head>
+<body>
+    <h2 id="ejemplo">Aprendiendo JavaScript</h2>
+
+    <button type="button" onclick="document.getElementById('ejemplo').innerHTML = 'Esto es JavaScript'">Clic para ejecutar JavaScript</button><br><br>
+
+    <img src="imagenes js/nemo2.jpg" width="100%" id="nemo">
+
+    <button onclick="document.getElementById('nemo').src= 'https://opromar.com/catalogo-especies/sites/opromar/files/styles/large/public/xiphias_gladius_sw.jpeg?itok=Q9utA86w'">Clic para cambiar imagen</button><br><br>
+
+    <button onclick="document.getElementById('nemo').src= 'imagenes js/nemo2.jpg'">Clic para volver a nemo</button><br><br>
+
+    <p id="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore minima laborum soluta ea totam vel at eum suscipit facilis, natus, dolorem est illo iure dicta officia quas alias! Iure, architecto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ex nihil cupiditate aperiam placeat sequi veritatis odit voluptas tempora libero nulla veniam quam ab non, qui perspiciatis nobis animi incidunt?</p>
+
+    <button type="button" onclick="document.getElementById('texto').style.fontSize = '35px'">Cambia el tamaño de la letra</button><br><br>
+    <button type="button" onclick="document.getElementById('texto').style.display='none'">Ocultar</button>
+    <button type="button" onclick="document.getElementById('texto').style.display = 'block'">Mostrar</button>
+</body>
+</html>

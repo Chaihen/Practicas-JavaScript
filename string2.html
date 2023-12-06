@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 2</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+
+    <script>
+        let texto = "    Mentors Education    ",
+            textotrim = texto.trim(),
+            trimstart = texto.trimStart(),
+            trimend = texto.trimEnd();
+        
+        let texto2 = 5,
+            numeroacadena = texto2.toString(),
+            rellenoinicio = numeroacadena.padStart(4,"x"),
+            rellenofinal = rellenoinicio.padEnd(7,"x");
+
+        let texto3 = "Mentors Education es la plataforma de estudio de Programacion Web de Mentors International";
+            matrizTexto3 = texto3.match(/ion/g),
+            matchallTexto3 = texto3.matchAll("ion");
+
+    document.getElementById('ejemplo').innerHTML = texto + "<br> Sin trim" + 
+    texto.length + "<br> Con trim" 
+    + textotrim.length + "<br> Con trim al inicio" 
+    + trimstart.length + "<br> Con trim al final" 
+    + trimend.length + "<br><br>" 
+    + texto2 + "<br>" 
+    + rellenoinicio + "<br>"
+    + rellenofinal + "<br><br>"
+    + texto3.charAt(0) + "<br>"
+    + texto3.charCodeAt(0) /*proporciona el unicode*/
+    + "<br><br>"
+    + texto3.indexOf("de", 37) + "<br>"
+    + texto3.lastIndexOf("de", 64) + "<br>"
+    + matrizTexto3 + " " + matrizTexto3.length + "<br>"
+    + Array.from(matchallTexto3)
+    ;
+    </script>
+</body>
+</html>

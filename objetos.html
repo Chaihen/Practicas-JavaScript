@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1 id="ejemplo"></h1>
+    <script>
+        const auto = {
+            tipo:"Fiat", 
+            modelo:"500", 
+            color:"blanco",
+            marcaycolor: function() {return this.tipo + " " + this.color;}
+        };
+
+        const auto2 = {
+            tipo:"Chevrolet", 
+            modelo:"500", 
+            color:"blanco",
+            marcaycolor: function() {return this.tipo + " " + this.color;}
+        };
+
+        document.getElementById('ejemplo').innerHTML = auto.marcaycolor() + "<br>"
+         + auto2.marcaycolor();
+    </script>
+</body>
+</html>

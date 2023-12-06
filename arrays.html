@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array (Matrices)</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+    <script>
+        const autos = ["Toyota", "Volvo", "BMW"];
+            autos[3] = "Nissan";
+            autos[4] = "Audi";
+            autos[5] = "Ferrari";
+            autos[10] = "Chevrolet";
+            autosString = autos.toString();
+
+            let lista = "<ul>"
+                autos.forEach(miFuncion);
+                lista += "</ul>"
+
+                function miFuncion(valor){
+                    lista += "<li>" + valor + "</li>";
+                }
+
+            document.getElementById('ejemplo').innerHTML = 
+            autos + "<br>" +
+            typeof autos +  "<br>" + 
+            typeof autosString +  "<br> Tamaño de matriz " +
+            autos.length + "<br> Tamaño de la cadena " +
+            autosString.length + "<br> Ultimo elemento" +
+            autos[autos.length - 1] /*arreglo para obtener el ultimo
+             elemento de una matriz*/+ "<br>" + lista + "<br>" +
+            autos[9] + "<br>" + Array.isArray(autos) + "<br>" +
+            Array.isArray(autosString)
+            ;
+    </script>
+</body>
+</html>

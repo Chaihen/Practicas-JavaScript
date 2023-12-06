@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea JavaScript Chaihen</title>
+    <style>
+        body{
+            background-color: rgb(176, 224, 230)
+        }
+
+        h2 {
+            color: #53230d;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 35px;
+        }
+
+        label {
+            color: #53230d;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            font-size: 16px;
+            font-weight: bold;
+           
+        }
+        
+        button {
+            background-color: pink
+        }
+
+        button:hover {
+            background-color: rgb(217, 116, 132);
+        }
+
+        input:focus {
+            width: 200px;
+            background-color: LightPink;
+        }
+
+        p {
+            color: #53230d;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Stock de Donuts</h2>
+    <label for="donaChocolate">Chocolate Negro</label>
+    <input type="number" id="cantidadChocolate" name="donaChocolate" min="1" value= "1"><br><br>
+
+    <label for="donaBlanco">Chocolate Blanco</label>
+    <input type="number" id="cantidadBlanco" name="donaBlanco" min="1" value="1"><br><br>
+
+    <button onclick="comprobarDisponibilidad()">Verificar Stock</button>
+
+    <p id="muestraDisponibilidad"></p>
+
+    <script>
+        function comprobarDisponibilidad() {
+            cantidadCompra1 = document.getElementById('cantidadChocolate').value;
+            cantidadCompra2 = document.getElementById('cantidadBlanco').value;
+
+            stockComparacion = ( cantidadCompra1 <= 50 && cantidadCompra2 <= 50) ? "Si hay disponibilidad de Stock":"No hay suficiente Stock";
+
+            document.getElementById('muestraDisponibilidad').innerHTML = stockComparacion;
+        }
+    </script>
+
+</body>
+</html>

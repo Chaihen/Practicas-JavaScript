@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechas como objetos en JavaScript</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+
+    <script>
+
+        const fechaNav = new Date('12/25/2000');
+        const fecha2 = new Date("October 13, 2014 11:13:00");
+
+        const fecha3 = new Date(2014, 12, 13, 11, 13, 0, 0);//Equivalencias de fechas 
+        const fecha4 = new Date(2013, 21, 13, 11, 13, 0, 0);//Desbordamiento de mes 
+
+        const fecha5 = new Date(2024);
+        const fecha6 = new Date(9, 11, 24);//colocar 1 digito en la posicion del año te lleva al siglo anterior
+        const fecha7 = new Date(24 * 60 * 60 * 1000);
+
+        const d = new Date("2015-03-25T12:00:00+07:00");
+
+        document.getElementById('ejemplo').innerHTML = 
+        fechaNav + "<br><br>" + 
+        fecha2 + "<br><br>" + 
+        fecha3 + "<br><br>" +
+        fecha4.toDateString() + "<br><br>" + //Resultado corto de la fecha
+        fecha5 + "<br><br>" +
+        fecha6 + "<br><br>" +
+        fecha7 + "<br><br>" +
+        fecha7.toDateString() + "<br><br>" +
+        d
+        ;
+
+    </script>
+</body>
+</html>

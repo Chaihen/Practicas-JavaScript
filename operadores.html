@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+    <h2 id="ejemplo"></h2>
+    <h2 id="ejemplo2"></h2>
+    <h2 id="ejemplo3"></h2>
+    <h2 id="ejemplo4"></h2>
+    <script>
+        let x = 6;
+            y = 3;
+      //and: && todas sus respuestas deben ser verdad para que retorne una verdad.
+      //or || todas sus respuestas deben ser falsas para retornar un falso (barras tubulareso pipe).
+      //not ! da respuestas opuestas.
+            document.getElementById('ejemplo').innerHTML = !(x < 10);
+            document.getElementById('ejemplo2').innerHTML = !(y > 1);
+            document.getElementById('ejemplo3').innerHTML = !(x <10 || y > 1);
+                
+     //Operador ternario tiene: nombreVariable = ( condicion ) ? valor1:valor2     
+     let z = (y > 4) ? "Si es mayor":"No es mayor";
+
+     document.getElementById('ejemplo4').innerHTML = z;
+    </script>
+</body>
+</html>

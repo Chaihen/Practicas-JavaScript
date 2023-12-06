@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Metodos en Fechas</title>
+</head>
+<body>
+    <label for="fecha">Cantidad de días para reservar la cita</label>
+    <input type="number" max="30" id="diasInput" value="30"> 
+    <button type="button" onclick="reservarCita()">Reservar Cita</button>
+    <h2 id="resultado">Se ha reservado tu cita para:</h2>
+
+    <script>
+        function reservarCita() {
+            const dias = parseInt(document.getElementById('diasInput').value); 
+
+            const fecha = new Date();
+
+            fecha.setDate(fecha.getDate() + dias); 
+
+            const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", 
+            "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            const diaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"];
+
+            const dia = fecha.getDate();
+            const mes = meses[fecha.getMonth()];
+            const ano = fecha.getFullYear();
+            const diaNombre = diaSemana[fecha.getDay()];
+
+            document.getElementById('resultado').innerHTML = `Se ha reservado tu cita para: 
+            ${diaNombre}, ${dia} de ${mes} de ${ano}`; 
+        }
+    </script>
+</body>
+</html>
